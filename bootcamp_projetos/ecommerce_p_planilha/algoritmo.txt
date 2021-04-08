@@ -1,0 +1,9 @@
+1 - Capturar informação do e-mail de envio
+2 - Criar cabeçalho da planilha
+3 - Acessar site -> https://telefonesimportados.netlify.app
+4 - Capturar informações da primeira pagina
+5 - Salvar na planilha
+6 - Acessar próxima pagina -> /shop2.html
+7 - Capturar informações da próxima pagina
+8 - Salvar na planilha
+9 - Realizar o envio do e-mail
