@@ -12,23 +12,32 @@ def apresentacao():
 
 def gera_numero_aleartorio():
     print('Gerando um número entre 1 e 100...')
-
     return random.randint(1, 100)
-
-def captura_dado_usuario():
-    try:
-        return int(input('Chute um número de 1 a 100: '))
-    except ValueError:
-        print('Por favor, digite um número inteiro')
-
 
 
 def main():
     apresentacao()
-    gera_numero_aleartorio()
+    numero_secreto = gera_numero_aleartorio()
 
+    while True:
+        numero_chutado = int(input('Chute um número de 1 a 100: '))
+
+        if numero_secreto == numero_chutado:
+            print('Voce Acertou !!')
+
+            sair = input('Deseja continuar?\nPara sair digite s \
+                 \nPara continuar, aperte a tecla ENTER\n -> ')
+            if sair.lower() == 's':
+                break
+            else:
+                numero_secreto = gera_numero_aleartorio()
+                
+                
+        elif numero_secreto < numero_chutado:
+            print('Chute um numero menor\n')
+        else:
+            print('Chute um numero maior\n')
+    
 
 if __name__ == '__main__':
-    # numero = gera_numero_aleartorio()
-    captura_dado_usuario()
-
+    main()
